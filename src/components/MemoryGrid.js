@@ -37,6 +37,21 @@ class MemoryGrid extends React.Component {
                 <MemoryCard />
                 <MemoryCard />
                 <MemoryCard />
+                <MemoryCard />
+                <MemoryCard />
+                <MemoryCard />
+                <MemoryCard />
+                <MemoryCard />
+                <MemoryCard />
+                <MemoryCard />
+                <MemoryCard />
+                <MemoryCard />
+                <MemoryCard />
+                <MemoryCard />
+                <MemoryCard />
+                <MemoryCard />
+                <MemoryCard />
+                <MemoryCard />
             </div>
         );
     }

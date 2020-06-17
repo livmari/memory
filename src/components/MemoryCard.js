@@ -1,4 +1,5 @@
 import React from 'react'
+import Heart from '../images/emoji_heart.png'
 
 class MemoryCard extends React.Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class MemoryCard extends React.Component {
     render() {
         return (
             <div className={this.state.classes}>
-
+                <img src={Heart} />
             </div>
         )
     }
