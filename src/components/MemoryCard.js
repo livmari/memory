@@ -5,14 +5,15 @@ class MemoryCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            classes: 'memory-card'
+            classes: 'memory-card',
+            heart: Heart
         }
     }
 
     render() {
         return (
             <div className={this.state.classes}>
-                <img src={Heart} />
+                <img src={this.state.heart} />
             </div>
         )
     }

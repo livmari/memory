@@ -5,53 +5,25 @@ class MemoryGrid extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            classes: 'memory-grid'
+            classes: 'memory-grid',
+            cards: []
         }
+    }
+
+    addCards() {
+        let cards = []
+        const card = <MemoryCard />
+        for (let i = 0; i < 40; i++) {
+            cards.push(card)
+        }
+        console.log(cards)
+        return cards
     }
 
     render() {
         return (
             <div className={this.state.classes}>
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
-                <MemoryCard />
+                {this.addCards()}
             </div>
         );
     }
