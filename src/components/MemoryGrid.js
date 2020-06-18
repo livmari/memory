@@ -12,11 +12,13 @@ class MemoryGrid extends React.Component {
 
     addCards() {
         let cards = []
-        const card = <MemoryCard />
+        const EMOJI_QTY = 96
+        let random = Math.floor(Math.random() * EMOJI_QTY)
+        let src = '../assets/memory/' + random + '.png'
+        const card = <MemoryCard front={src} />
         for (let i = 0; i < 40; i++) {
             cards.push(card)
         }
-        console.log(cards)
         return cards
     }
 
