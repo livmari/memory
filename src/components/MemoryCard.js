@@ -15,7 +15,7 @@ class MemoryCard extends React.Component {
         return (
             <div className={this.state.classes}>
                 <img src={this.state.front} />
-                <img src={require(this.props.back)} />
+                <img src={this.props.back} />
             </div>
         )
     }

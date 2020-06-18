@@ -5,20 +5,32 @@ class MemoryGrid extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            classes: 'memory-grid',
-            cards: []
+            classes: 'memory-grid'
         }
     }
 
+    dirSize(path) {
+        let fs = require('fs')
+        let totalFiles
+        fs.readdir(path, (error, files) => {
+            totalFiles = files.length
+        })
+    }
+
     addCards() {
+
+        let emojiQty = this.dirSize('../assets/emojis')
         let cards = []
-        const EMOJI_QTY = 96
-        let random = Math.floor(Math.random() * EMOJI_QTY)
+
+        let random = Math.floor(Math.random() * emojiQty)
         let src = '../assets/memory/' + random + '.png'
+
         const card = <MemoryCard front={src} />
+
         for (let i = 0; i < 40; i++) {
             cards.push(card)
         }
+
         return cards
     }
 
@@ -27,7 +39,7 @@ class MemoryGrid extends React.Component {
             <div className={this.state.classes}>
                 {this.addCards()}
             </div>
-        );
+        )
     }
 }
 
